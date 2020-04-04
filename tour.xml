@@ -1,0 +1,154 @@
+﻿<krpano version="1.20" title="Nhu-Ngoc DAO's home page">
+
+	<style name="control_btn" url="%FIRSTXML%/skin/webskin.png" scale="0.5" />
+
+	<!-- skin layout -->
+	<layer name="control_bar" type="container" align="bottom" width="1080" height="46" x="0" y="0" bgcolor="" bgalpha="" scalechildren="true" zorder="10" keep="true">
+		<layer name="googlescholar_btn" type="container" align="lefttop" width="360" height="46" x="0" y="0" bgcolor="0x4a4a4a" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="googlescholar" style="control_btn" crop="2|0|356|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://scholar.google.co.kr/citations?user=rWmFrIgAAAAJ',_blank);" />
+		</layer>
+		<layer name="resume_btn" type="container" align="lefttop" width="360" height="46" x="360" y="0" bgcolor="0xc60f30" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="resume" style="control_btn" crop="360|0|360|92" align="center" x="0" y="0" alpha="" onclick="update2(); if(layer[myresume].state == 0, set(layer[myresume].state,1); set(layer[myresume].visible,true); tween(layer[myresume].y,0,2.0,linear), set(layer[myresume].state,0); tween(layer[myresume].y,get(chieucao),2.0,linear,set(layer[myresume].visible,false));)" />
+		</layer>
+		<layer name="researchgate_btn" type="container" align="lefttop" width="360" height="46" x="720" y="0" bgcolor="0x00ccbb" bgalpha="1" scalechildren="true" keep="true">
+			<layer name="researchgate" style="control_btn" crop="720|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://www.researchgate.net/profile/Nhu_Ngoc_Dao/publications',_blank);" />
+		</layer>
+	</layer>
+
+	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-455" y="5" keep="true" onclick="loadscene(cau, null, MERGE, BLEND(1))"/>
+	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="loadscene(unibe, null, MERGE, BLEND(1))"/>
+	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="440" y="5" keep="true" onclick="loadscene(sju, null, MERGE, BLEND(1))"/>
+	
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		update2();
+		tween(layer[myresume].y,get(chieucao),0.1,linear,set(layer[myresume].visible,true));
+		loadscene(sju, null, MERGE);
+		if(startactions !== null, startactions());
+	</action>
+
+	<autorotate enabled="true"
+            waittime="0"
+            accel="1.0"
+            speed="1.0"
+            horizon="0.0"
+            tofov="off"
+            oneroundrange="360.0"
+            zoomslowdown="true"
+            interruptionevents="userviewchange|layers|keyboard"
+    />
+
+	<action name="update2">
+		sub(chieucao,get(stageheight),46);
+	</action>
+
+	<!-- My Resume -->
+	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
+		<layer name="containercv" type="container" align="top" width="1080" height="100%" x="0" y="0" bgcolor="0x000000" bgalpha="0.1" keep="true" >
+			<layer name="scrollarea" url="%FIRSTXML%/plugins/scrollarea.swf" alturl="%FIRSTXML%/plugins/scrollarea.js" align="top" y="-46" width="1080" height="3444" direction="v" onloaded="setcenter(0,0)" >
+				<layer name="thumb_s1a1" url="%FIRSTXML%/cv/mycv.png" keep="true" align="top" width="1080" height="3444" preload="true"/>
+			</layer>
+		</layer>
+	</layer>
+
+
+
+	
+	<scene name="unibe" title="1. UniBe" onstart="set(autorotate.horizon,-12)" >
+
+		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1__UniBe.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/1__UniBe.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="cau" title="2. Bern landscape" onstart="set(autorotate.horizon,0)" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2__Bern_landscape.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/2__Bern_landscape.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="sju" title="3. The Cathedral of Bern" onstart="set(autorotate.horizon,0)" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3__The_Cathedral_of_Bern.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/3__The_Cathedral_of_Bern.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_4__The_Cathedral_of_Bern_-_zoom_in" title="4. The Cathedral of Bern - zoom in" onstart="" thumburl="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_5__Bern_Station" title="5. Bern Station" onstart="" thumburl="panos/5__Bern_Station.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/5__Bern_Station.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/5__Bern_Station.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_6__Old_street_a" title="6. Old street a" onstart="" thumburl="panos/6__Old_street_a.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/6__Old_street_a.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/6__Old_street_a.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_7__Old_street_b" title="7. Old street b" onstart="" thumburl="panos/7__Old_street_b.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/7__Old_street_b.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/7__Old_street_b.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_8__Chess_on_street" title="8. Chess on street" onstart="" thumburl="panos/8__Chess_on_street.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/8__Chess_on_street.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/8__Chess_on_street.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
+		</image>
+
+	</scene>
+
+
+</krpano>
