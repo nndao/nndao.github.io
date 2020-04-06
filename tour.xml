@@ -24,7 +24,6 @@
 		update2();
 		tween(layer[myresume].y,get(chieucao),0.1,linear,set(layer[myresume].visible,true));
 		loadscene(sju, null, MERGE);
-		setinterval(scenesw,6,sceneswitch());
 		if(startactions !== null, startactions());
 	</action>
 
@@ -43,11 +42,6 @@
 		sub(chieucao,get(stageheight),46);
 	</action>
 
-	<action name="sceneswitch">
-		if(scene[get(xml.scene)].name == "cau",loadscene(unibe, null, MERGE, BLEND(1)));
-		if(scene[get(xml.scene)].name == "unibe",loadscene(sju, null, MERGE, BLEND(1)));
-		if(scene[get(xml.scene)].name == "sju",loadscene(cau, null, MERGE, BLEND(1)));
-	</action>
 	<!-- My Resume -->
 	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
 		<layer name="containercv" type="container" align="top" width="1080" height="100%" x="0" y="0" bgcolor="0x000000" bgalpha="0.1" keep="true" >
@@ -58,7 +52,7 @@
 	</layer>
 
 
-	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-10)" >
+	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-10); delayedcall(6,loadscene(unibe, null, MERGE, BLEND(1));" >
 
 		<view hlookat="0.0" vlookat="-10.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -71,7 +65,7 @@
 	</scene>
 
 	
-	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12)" >
+	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12); delayedcall(6,loadscene(sju, null, MERGE, BLEND(1));" >
 
 		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -83,7 +77,7 @@
 
 	</scene>
 
-	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,0)" >
+	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,0); delayedcall(6,loadscene(cau, null, MERGE, BLEND(1));" >
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
