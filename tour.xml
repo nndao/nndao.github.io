@@ -24,7 +24,7 @@
 		update2();
 		tween(layer[myresume].y,get(chieucao),0.1,linear,set(layer[myresume].visible,true));
 		loadscene(sju, null, MERGE);
-		setinterval(scenesw,60,loadscene(cau, null, MERGE, BLEND(1));loadscene(cau, null, MERGE, BLEND(1));loadscene(cau, null, MERGE, BLEND(1)));
+		setinterval(scenesw,60,sceneswitch());
 		if(startactions !== null, startactions());
 	</action>
 
@@ -43,6 +43,11 @@
 		sub(chieucao,get(stageheight),46);
 	</action>
 
+	<action name="sceneswitch">
+		if(xml.scene == "cau",loadscene(unibe, null, MERGE, BLEND(1)));
+		if(xml.scene == "unibe",loadscene(sju, null, MERGE, BLEND(1)));
+		if(xml.scene == "sju",loadscene(cau, null, MERGE, BLEND(1)));
+	</action>
 	<!-- My Resume -->
 	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
 		<layer name="containercv" type="container" align="top" width="1080" height="100%" x="0" y="0" bgcolor="0x000000" bgalpha="0.1" keep="true" >
