@@ -24,7 +24,7 @@
 		update2();
 		tween(layer[myresume].y,get(chieucao),0.1,linear,set(layer[myresume].visible,true));
 		loadscene(sju, null, MERGE);
-		setinterval(scenesw,60,sceneswitch());
+		setinterval(scenesw,6,sceneswitch());
 		if(startactions !== null, startactions());
 	</action>
 
