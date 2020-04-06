@@ -15,9 +15,9 @@
 		</layer>
 	</layer>
 
-	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-410" y="5" keep="true" onclick="loadscene(cau, null, MERGE, BLEND(1))"/>
-	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="loadscene(unibe, null, MERGE, BLEND(1))"/>
-	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="400" y="5" keep="true" onclick="loadscene(sju, null, MERGE, BLEND(1))"/>
+	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-410" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(cau, null, MERGE, BLEND(1))"/>
+	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(unibe, null, MERGE, BLEND(1))"/>
+	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="400" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(sju, null, MERGE, BLEND(1))"/>
 	
 	<!-- startup action - load the first scene -->
 	<action name="startup" autorun="onstart">
@@ -52,7 +52,7 @@
 	</layer>
 
 
-	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-18); delayedcall(60,loadscene(unibe, null, MERGE, BLEND(1)));" >
+	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-18); delayedcall(unibeload,60,loadscene(unibe, null, MERGE, BLEND(1)));" >
 
 		<view hlookat="0.0" vlookat="-18.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -65,7 +65,7 @@
 	</scene>
 
 	
-	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12); delayedcall(60,loadscene(sju, null, MERGE, BLEND(1)));" >
+	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12); delayedcall(sjuload,60,loadscene(sju, null, MERGE, BLEND(1)));" >
 
 		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -77,7 +77,7 @@
 
 	</scene>
 
-	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,0); delayedcall(60,loadscene(cau, null, MERGE, BLEND(1)));" >
+	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,0); delayedcall(cauload,60,loadscene(cau, null, MERGE, BLEND(1)));" >
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
