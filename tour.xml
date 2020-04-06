@@ -44,9 +44,9 @@
 	</action>
 
 	<action name="sceneswitch">
-		if(get(scene[get(xml.scene)].name) == "cau",loadscene(unibe, null, MERGE, BLEND(1)));
-		if(get(scene[get(xml.scene)].name) == "unibe",loadscene(sju, null, MERGE, BLEND(1)));
-		if(get(scene[get(xml.scene)].name) == "sju",loadscene(cau, null, MERGE, BLEND(1)));
+		if(scene[get(xml.scene)].name == "cau",loadscene(unibe, null, MERGE, BLEND(1)));
+		if(scene[get(xml.scene)].name == "unibe",loadscene(sju, null, MERGE, BLEND(1)));
+		if(scene[get(xml.scene)].name == "sju",loadscene(cau, null, MERGE, BLEND(1)));
 	</action>
 	<!-- My Resume -->
 	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
