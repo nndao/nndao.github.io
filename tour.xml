@@ -15,9 +15,9 @@
 		</layer>
 	</layer>
 
-	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-455" y="5" keep="true" onclick="loadscene(cau, null, MERGE, BLEND(1))"/>
+	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-400" y="5" keep="true" onclick="loadscene(cau, null, MERGE, BLEND(1))"/>
 	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="loadscene(unibe, null, MERGE, BLEND(1))"/>
-	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="440" y="5" keep="true" onclick="loadscene(sju, null, MERGE, BLEND(1))"/>
+	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="400" y="5" keep="true" onclick="loadscene(sju, null, MERGE, BLEND(1))"/>
 	
 	<!-- startup action - load the first scene -->
 	<action name="startup" autorun="onstart">
@@ -52,9 +52,20 @@
 	</layer>
 
 
+	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,0)" >
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cau/preview.jpg" />
+
+		<image>
+			<cube url="panos/cau/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,1792" />
+		</image>
+
+	</scene>
 
 	
-	<scene name="unibe" title="1. UniBe" onstart="set(autorotate.horizon,-12)" >
+	<scene name="unibe" title="The University of Bern" onstart="set(autorotate.horizon,-12)" >
 
 		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -66,19 +77,7 @@
 
 	</scene>
 
-	<scene name="cau" title="2. Bern landscape" onstart="set(autorotate.horizon,0)" >
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/2__Bern_landscape.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/2__Bern_landscape.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
-	<scene name="sju" title="3. The Cathedral of Bern" onstart="set(autorotate.horizon,0)" >
+	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,0)" >
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -89,66 +88,5 @@
 		</image>
 
 	</scene>
-
-	<scene name="scene_4__The_Cathedral_of_Bern_-_zoom_in" title="4. The Cathedral of Bern - zoom in" onstart="" thumburl="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/thumb.jpg" lat="" lng="" heading="">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/4__The_Cathedral_of_Bern_-_zoom_in.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_5__Bern_Station" title="5. Bern Station" onstart="" thumburl="panos/5__Bern_Station.tiles/thumb.jpg" lat="" lng="" heading="">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/5__Bern_Station.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/5__Bern_Station.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_6__Old_street_a" title="6. Old street a" onstart="" thumburl="panos/6__Old_street_a.tiles/thumb.jpg" lat="" lng="" heading="">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/6__Old_street_a.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/6__Old_street_a.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_7__Old_street_b" title="7. Old street b" onstart="" thumburl="panos/7__Old_street_b.tiles/thumb.jpg" lat="" lng="" heading="">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/7__Old_street_b.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/7__Old_street_b.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_8__Chess_on_street" title="8. Chess on street" onstart="" thumburl="panos/8__Chess_on_street.tiles/thumb.jpg" lat="" lng="" heading="">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/8__Chess_on_street.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/8__Chess_on_street.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2560" />
-		</image>
-
-	</scene>
-
 
 </krpano>
