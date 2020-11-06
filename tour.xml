@@ -8,7 +8,7 @@
 			<layer name="googlescholar" style="control_btn" crop="2|0|356|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://scholar.google.co.kr/citations?user=rWmFrIgAAAAJ',_blank);" />
 		</layer>
 		<layer name="resume_btn" type="container" align="lefttop" width="360" height="46" x="360" y="0" bgcolor="0xc60f30" bgalpha="1" scalechildren="true" keep="true">
-			<layer name="resume" style="control_btn" crop="360|0|360|92" align="center" x="0" y="0" alpha="" onclick="update2(); if(layer[myresume].state == 0, set(layer[myresume].state,1); set(layer[myresume].visible,true); tween(layer[myresume].y,0,2.0,linear), set(layer[myresume].state,0); tween(layer[myresume].y,get(chieucao),2.0,linear,set(layer[myresume].visible,false));)" />
+			<layer name="resume" style="control_btn" crop="360|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://nndao.github.io/',_blank);" />
 		</layer>
 		<layer name="researchgate_btn" type="container" align="lefttop" width="360" height="46" x="720" y="0" bgcolor="0x00ccbb" bgalpha="1" scalechildren="true" keep="true">
 			<layer name="researchgate" style="control_btn" crop="720|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://www.researchgate.net/profile/Nhu_Ngoc_Dao/publications',_blank);" />
