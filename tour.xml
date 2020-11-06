@@ -42,7 +42,7 @@
 		sub(chieucao,get(stageheight),46);
 	</action>
 
-	<!-- My Resume -->
+	<!-- My Resume 
 	<layer name="myresume" type="container" align="top" width="1080" height="100%" y="0" x="0" keep="true" state="0" visible="false">
 		<layer name="containercv" type="container" align="top" width="1080" height="100%" x="0" y="0" bgcolor="0x000000" bgalpha="0.1" keep="true" >
 			<layer name="scrollarea" url="%FIRSTXML%/plugins/scrollarea.swf" alturl="%FIRSTXML%/plugins/scrollarea.js" align="top" y="-46" width="1080" height="3444" direction="v" onloaded="setcenter(0,0)" >
@@ -50,7 +50,7 @@
 			</layer>
 		</layer>
 	</layer>
-
+-->
 
 	<scene name="cau" title="Chung-Ang University" onstart="set(autorotate.horizon,-18); delayedcall(unibeload,120,loadscene(unibe, null, MERGE, BLEND(1)));" >
 
