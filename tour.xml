@@ -2,7 +2,7 @@
 
 	<style name="control_btn" url="%FIRSTXML%/skin/webskin.png" scale="0.5" />
 
-	<!-- skin layout -->
+	<!-- skin layout 
 	<layer name="control_bar" type="container" align="bottom" width="1080" height="46" x="0" y="0" bgcolor="" bgalpha="" scalechildren="true" zorder="10" keep="true">
 		<layer name="googlescholar_btn" type="container" align="lefttop" width="360" height="46" x="0" y="0" bgcolor="0x4a4a4a" bgalpha="1" scalechildren="true" keep="true">
 			<layer name="googlescholar" style="control_btn" crop="2|0|356|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://scholar.google.co.kr/citations?user=rWmFrIgAAAAJ',_blank);" />
@@ -14,7 +14,7 @@
 			<layer name="researchgate" style="control_btn" crop="720|0|360|92" align="center" x="0" y="0" alpha="" onclick="openurl('https://www.researchgate.net/profile/Nhu_Ngoc_Dao/publications',_blank);" />
 		</layer>
 	</layer>
-
+-->
 	<layer name="caulogo" url="%FIRSTXML%/unilogo/cau.png" align="top" x="-410" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(cau, null, MERGE, BLEND(1))"/>
 	<layer name="unibelogo" url="%FIRSTXML%/unilogo/unibe.png" align="top" x="0" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(unibe, null, MERGE, BLEND(1))"/>
 	<layer name="sjulogo" url="%FIRSTXML%/unilogo/sju.png" align="top" x="400" y="5" keep="true" onclick="stopdelayedcall(cauload); stopdelayedcall(unibeload); stopdelayedcall(sjuload); loadscene(sju, null, MERGE, BLEND(1))"/>
