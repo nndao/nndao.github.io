@@ -77,9 +77,9 @@
 
 	</scene>
 
-	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,-12); delayedcall(cauload,120,loadscene(cau, null, MERGE, BLEND(1)));" >
+	<scene name="sju" title="Sejong University" onstart="set(autorotate.horizon,-8); delayedcall(cauload,120,loadscene(cau, null, MERGE, BLEND(1)));" >
 
-		<view hlookat="0.0" vlookat="-12.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="-8.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/3__The_Cathedral_of_Bern.tiles/preview.jpg" />
 
