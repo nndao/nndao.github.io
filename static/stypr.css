@@ -174,9 +174,9 @@ footer {
     float: right;
 }
 
-@media(max-width:800px){
+/* @media(max-width:800px){
     body{
         margin-left: 5pt;
         margin-right: 5pt;
     }
-}
+} */
