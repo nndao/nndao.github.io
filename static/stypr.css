@@ -87,14 +87,14 @@ header .info {
     padding-right: 10pt;
 }
 
-@media (max-width:500px){
+/* @media (max-width:500px){
     header img{
         width: 14px;
     }
     header .info a{
         font-size: 7pt;
     }
-}
+} */
 
 .wrapper{
     width:100%;
@@ -130,7 +130,8 @@ header .info {
 .container table {
     width: 100%;
     font-size: 11pt;
-    padding-left,padding-right: 10pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
     padding-top: 5pt;
     letter-spacing: 0.5pt;
     line-height: 1.6;
@@ -175,7 +176,7 @@ footer {
 
 @media(max-width:800px){
     body{
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 5pt;
+        margin-right: 5pt;
     }
 }
