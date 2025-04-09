@@ -151,9 +151,9 @@ header .info {
     font-style: italic;
 }    
 
-.container table .description {
+/* .container table .description {
     font-size: 11pt;
-}
+} */
 
 .container table .degree {
     text-align: center;
