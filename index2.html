@@ -7,7 +7,7 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=1100"
   />
 
   <title>Nhu-Ngoc Dao</title>
@@ -21,12 +21,6 @@
     href="https://fonts.gstatic.com"
     crossorigin
   >
-
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -56,9 +50,15 @@
     body {
       width: 100%;
       min-height: 100%;
+    }
+
+    body {
+
       background: #d1d5db;
+
       font-family: "Inter", sans-serif;
-      overflow-x: hidden;
+
+      overflow-x: auto;
       overflow-y: auto;
     }
 
@@ -67,26 +67,34 @@
     }
 
     /* =======================================================
-       RESPONSIVE A4 LAYOUT
+       FIXED A4 LAYOUT
     ======================================================= */
 
     .page-wrapper {
-      width: 100%;
+
+      width: 100vw;
       min-height: 100vh;
+
       display: flex;
       justify-content: center;
       align-items: flex-start;
+
+      overflow: auto;
     }
 
     .a4-page {
-      width: 100%;
-      max-width: 270mm; /* A4 standard width */
-      min-height: 100vh; /* A4 standard height */
+
+      width: 1100px;
+      min-height: 1123px;
+
       background: white;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+
+      transform-origin: top center;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.15);
+
       position: relative;
-      display: flex;
-      flex-direction: column;
     }
 
     /* =======================================================
@@ -312,68 +320,62 @@
       font-size: 16px;
     }
 
+
     /* FOOTER */
 
     footer {
+
       padding-top: 20px;
       padding-bottom: 20px;
+
       border-top: 1px solid #e5e7eb;
+
       text-align: center;
+
       font-size: 13px;
+
       color: #6b7280;
+
       background:#c8c8c8;
-      margin-top: auto; /* Keeps footer at bottom */
     }
 
     /* TELEGRAM FLOATING BUTTON */
 
     .telegram-floating {
+
       position: fixed;
+
       right: 24px;
       bottom: 24px;
+
       width: 62px;
       height: 62px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       border-radius: 50%;
+
       background: #229ED9;
+
       color: white;
+
       text-decoration: none;
+
       font-size: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+
       transition: 0.25s;
+
       z-index: 9999;
     }
 
     .telegram-floating:hover {
-      transform: scale(1.08);
-    }
 
-    /* Responsive Adjustments */
-    @media screen and (max-width: 600px) {
-      .project-item {
-        grid-template-columns: 1fr;
-      }
-      .project-time {
-        text-align: left;
-        padding-top: 0;
-      }
-      .member-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .member-photo {
-        margin-bottom: 10px;
-      }
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-      .journal-list, .patent-list, .student-list {
-        padding-left: 20px;
-      }
+      transform: scale(1.08);
     }
 
   </style>
@@ -638,34 +640,34 @@
           <ul style="list-style-type:square" class="student-list">
 
             <li class="student-item">
-              Anh Tuan Nguyen, PhD student since 09.2024
+              Anh Tuan Nguyen (Vietnam), PhD student since 09.2024
             </li>
             <li class="student-item">
-              Samuel Harry Gardner, BS (03.2022 - 08.2024), MS (09.2024 - 08.2026), PhD student since 09.2026
+              Duc Quyen Mac (Vietnam), MS student since 03.2026
             </li>
             <li class="student-item">
-              Minh Phuoc Nguyen, MS student (09.2024 - 08.2026), PhD student since 09.2026
+              Caleb Amanuel Wossen (USA), MS student since 09.2025
             </li>
             <li class="student-item">
-              Md Rakibul Islam, MS student since 03.2025
+              Md Rakibul Islam (Bangladesh), MS student since 03.2025
             </li>
             <li class="student-item">
-              Caleb Amanuel Wossen, MS student since 09.2025
+              Minh Phuoc Nguyen (Vietnam), MS student (09.2024 - 08.2026), PhD student since 09.2026
             </li>
             <li class="student-item">
-              Duc Quyen Mac, MS student since 03.2026
+              Samuel Harry Gardner (UK), BS student (03.2022 - 08.2024), MS student (09.2024 - 08.2026), PhD student since 09.2026
             </li>
             <li class="student-item" style="list-style-type:disc">
-              Islam Md Mahrab, MS (09.2024 - 08.2026)
+              Islam Md Mahrab (Bangladesh), MS student (09.2024 - 08.2026)
             </li>
             <li class="student-item" style="list-style-type:disc">
-              Fayshal Ahmed, MS (03.2023 - 02.2025)
+              Fayshal Ahmed (Bangladesh), MS student (03.2023 - 02.2025)
             </li>
             <li class="student-item" style="list-style-type:disc">
-              Teshager Hailemariam Moges, MS (09.2022 - 08.2024)
+              Teshager Hailemariam Moges (Ethiopia), MS student (09.2022 - 08.2024)
             </li>
             <li class="student-item" style="list-style-type:disc">
-              The-Vinh Nguyen, MS (09.2021 - 08.2023)
+              The-Vinh Nguyen (Vietnam), MS student (09.2021 - 08.2023)
             </li>
 
           </ul>
@@ -919,199 +921,103 @@
         © 2026 Nhu-Ngoc Dao
       </footer>
 
-
     </div>
+
   </div>
 
   <!-- =======================================================
        FLOATING CHAT
   ======================================================== -->
+
   <div class="floating-chat">
-    <a href="https://t.me/nhungocdao" target="_blank" class="telegram-floating" title="Contact via Telegram">
+
+    <a
+      href="https://t.me/nhungocdao"
+      target="_blank"
+      class="telegram-floating"
+    >
       <i class="fa-brands fa-telegram"></i>
     </a>
+
   </div>
 
   <!-- =======================================================
-       VANILLA JAVASCRIPT SLIDER IMPLEMENTATION
+       SCRIPT
   ======================================================== -->
+
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const track = document.getElementById("slider-track");
-      const slides = Array.from(document.querySelectorAll(".slide-section"));
-      const navBtns = Array.from(document.querySelectorAll(".nav-btn"));
 
-      let currentIndex = 0;
-      let isDragging = false;
-      let startPos = 0;
-      let currentTranslate = 0;
-      let prevTranslate = 0;
-      let animationID;
+    /* =======================================================
+       FIXED A4 AUTO SCALE
+    ======================================================= */
 
-      // 1. Navigation Click Listeners
-      navBtns.forEach((btn, index) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          goToSlide(index, true);
-        });
-      });
+    function scaleA4Page() {
 
-      // 2. Update Height Based on Active Slide
-      function updateHeight() {
-        const activeSlide = slides[currentIndex];
-        if(activeSlide) {
-            const newHeight = activeSlide.offsetHeight;
-            document.getElementById("slider-container").style.height = newHeight + "px";
-        }
-      }
+      const page =
+        document.querySelector(".a4-page");
 
-      // Height observation immediately when the page loads
-      const resizeObserver = new ResizeObserver(() => updateHeight());
-      slides.forEach(slide => resizeObserver.observe(slide));
+      const wrapper =
+        document.querySelector(".page-wrapper");
 
-      const images = document.querySelectorAll('.slider-container img');
-      images.forEach(img => {
-          if (img.complete) updateHeight();
-          else img.addEventListener('load', updateHeight);
-      });
+      const screenWidth =
+        window.innerWidth - 40;
 
-      // 3. Update UI State Function
-      function updateUI() {
-        navBtns.forEach((btn, idx) => btn.classList.toggle("active", idx === currentIndex));
-      }
+      const screenHeight =
+        window.innerHeight - 40;
 
-      // 4. Go to Slide Function
-      function goToSlide(index, updateHash = false) {
-        if (index < 0) index = 0;
-        if (index >= slides.length) index = slides.length - 1;
+      const scaleX =
+        screenWidth / 794;
 
-        currentIndex = index;
-        currentTranslate = currentIndex * -100;
-        prevTranslate = currentTranslate;
-        
-        track.style.transition = "transform 0.4s cubic-bezier(.22, .61, .36, 1)";
-        track.style.transform = `translateX(${currentTranslate}%)`;
-        
-        updateUI();
-        updateHeight();
+      const scaleY =
+        screenHeight / 1123;
 
-        if (updateHash) {
-          const targetHash = slides[currentIndex].id;
-          history.pushState(null, null, `#${targetHash}`);
-        }
-        
-        const activeNavBtn = navBtns[currentIndex];
-        if (activeNavBtn) {
-          activeNavBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-      }
+      const scale =
+        Math.min(scaleX, scaleY, 1);
 
-      // 5. Hash Routing (Browser Back/Forward)
-      function handleHashChange() {
-        const hash = window.location.hash.substring(1);
-        if (hash) {
-          const targetIndex = slides.findIndex(slide => slide.id === hash);
-          if (targetIndex !== -1) {
-            goToSlide(targetIndex, false);
-            return;
-          }
-        }
-        
-        // Default on open is 'members'
-        const defaultIndex = slides.findIndex(slide => slide.id === 'members');
-        if (defaultIndex !== -1) {
-            goToSlide(defaultIndex, false);
-        }
-      }
-      
-      window.addEventListener("hashchange", handleHashChange);
-      
-      window.addEventListener("load", () => {
-        handleHashChange(); 
-      });
-      
-      window.addEventListener("resize", updateHeight);
+      page.style.transform =
+        `scale(${scale})`;
 
-      // 6. Keyboard Accessibility
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowLeft") goToSlide(currentIndex - 1, true);
-        else if (e.key === "ArrowRight") goToSlide(currentIndex + 1, true);
-        else if (e.key === "Home") goToSlide(0, true);
-        else if (e.key === "End") goToSlide(slides.length - 1, true);
-      });
+      wrapper.style.height =
+        `${1123 * scale + 40}px`;
+    }
 
-      // 7. Touch and Drag Support
-      function getPositionX(event) {
-        return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
-      }
+    window.addEventListener(
+      "resize",
+      scaleA4Page
+    );
 
-      function touchStart(event) {
-        if(event.type.includes("mouse")) event.preventDefault();
-        
-        isDragging = true;
-        startPos = getPositionX(event);
-        animationID = requestAnimationFrame(animation);
-        track.style.transition = "none";
-      }
+    scaleA4Page();
 
-      function touchMove(event) {
-        if (isDragging) {
-          const currentPosition = getPositionX(event);
-          const diffX = currentPosition - startPos;
-          const diffPercentage = (diffX / track.clientWidth) * 100;
-          currentTranslate = prevTranslate + diffPercentage;
-        }
-      }
-
-      function touchEnd() {
-        if (!isDragging) return;
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        
-        const movedBy = currentTranslate - prevTranslate;
-
-        if (movedBy < -15 && currentIndex < slides.length - 1) currentIndex += 1;
-        if (movedBy > 15 && currentIndex > 0) currentIndex -= 1;
-
-        goToSlide(currentIndex, true);
-      }
-
-      function animation() {
-        track.style.transform = `translateX(${currentTranslate}%)`;
-        if (isDragging) requestAnimationFrame(animation);
-      }
-
-      track.addEventListener("mousedown", touchStart);
-      track.addEventListener("touchstart", touchStart, { passive: true });
-      
-      track.addEventListener("mousemove", touchMove);
-      track.addEventListener("touchmove", touchMove, { passive: true });
-      
-      track.addEventListener("mouseup", touchEnd);
-      track.addEventListener("touchend", touchEnd);
-      track.addEventListener("mouseleave", () => {
-        if (isDragging) touchEnd();
-      });
-
-    });
   </script>
 
-<!-- Default Statcounter code for PSHH lab
-https://pshhlab.github.io -->
-<script type="text/javascript">
-var sc_project=12714332; 
-var sc_invisible=1; 
-var sc_security="8873dfa3"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12714332/0/8873dfa3/1/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+  <!-- Default Statcounter code for Personal page
+  https://nndao.github.io -->
+  <script type="text/javascript">
+  var sc_project=13073379; 
+  var sc_invisible=1; 
+  var sc_security="cfd8539e"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web counter"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/13073379/0/cfd8539e/1/"
+  alt="web counter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+
 </body>
+
 </html>
